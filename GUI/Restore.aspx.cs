@@ -30,12 +30,21 @@ namespace GUI
 
         protected void restore_Click(object sender, EventArgs e)
         {
-            var ruta = @"C:\\Backup";
+            try
+            {
 
-            bool realizado = GestorBackup.RealizarRestore(ruta);
-            //btnFileUpload.SaveAs(Server.MapPath(".") + "/backup");
+                string PathServidor = Server.MapPath(".");
+                string PathDestino = $"{PathServidor}//backup//{btnFileUpload.FileName}";
 
 
+                btnFileUpload.SaveAs(PathServidor);
+               // var Ruta = Server.MapPath(btnFileUpload.FileName);
+               // bool realizado = GestorBackup.RealizarRestore(Ruta);
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.Message);                
+            }
         }
     }
 }

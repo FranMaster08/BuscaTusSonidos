@@ -11,7 +11,14 @@ namespace BLL
     {
         public static bool RealizarRestore(string ruta)
         {
-            //return MapperBackup.RealizarRestore(ruta);
+            try
+            {
+               return MapperBackup.RealizarRestore(ruta);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
     }
 }

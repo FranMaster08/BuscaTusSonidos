@@ -9,3 +9,15 @@ C:\Users\romina\source\repos\BuscaTuSonido\DAL\obj\Debug\DAL.csproj.CoreCompileI
 C:\Users\romina\source\repos\BuscaTuSonido\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\romina\source\repos\BuscaTuSonido\DAL\obj\Debug\DAL.dll
 C:\Users\romina\source\repos\BuscaTuSonido\DAL\obj\Debug\DAL.pdb
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\bin\Debug\DAL.dll
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\bin\Debug\DAL.pdb
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\bin\Debug\DynamicPDF.NETFramework40.dll
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\bin\Debug\itextsharp.dll
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\bin\Debug\DynamicPDF.NETFramework40.xml
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\obj\Debug\DAL.dll
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\obj\Debug\DAL.pdb
+C:\Users\A308610\Desktop\rommi\BuscaTuSonido2\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
