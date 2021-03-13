@@ -140,6 +140,7 @@
     <Content Include="Ads3.xml" />
     <Content Include="AnularFC.aspx" />
     <Content Include="Backup.aspx" />
+    <Content Include="backup\BTS.bak" />
     <Content Include="Carrito.aspx" />
     <Content Include="ComparacionProductos.aspx" />
     <Content Include="Configuracion.aspx" />
@@ -840,7 +841,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="backup\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

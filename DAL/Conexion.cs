@@ -139,12 +139,15 @@ namespace DAL
                 string sqlStmt2 = string.Format("ALTER DATABASE [" + nombreBaseDeDatos + "] SET SINGLE_USER WITH ROLLBACK IMMEDIATE");
                 SqlCommand bu2 = new SqlCommand(sqlStmt2, conexion);
                 bu2.ExecuteNonQuery();
+
                 string sqlStmt3 = "USE MASTER RESTORE DATABASE [" + nombreBaseDeDatos + "] FROM DISK='" + ruta + "'WITH REPLACE;";
                 SqlCommand bu3 = new SqlCommand(sqlStmt3, conexion);
                 bu3.ExecuteNonQuery();
+
                 string sqlStmt4 = string.Format("ALTER DATABASE [" + nombreBaseDeDatos + "] SET MULTI_USER");
                 SqlCommand bu4 = new SqlCommand(sqlStmt4, conexion);
                 bu4.ExecuteNonQuery();
+
                 conexion.Close();
                 return true;
             }
@@ -152,8 +155,13 @@ namespace DAL
             {
                 conexion.Close();
                 throw new Exception($"No se pudo Realizar Restore se la base de datos en la ruta:" +
-                    $"\n Ruta:{ruta} \n MensajeDeError:{e.Message}");
-            }          
+                    $"\n {ruta} \n {e.Message}");
+            }
+
+
+
+
+          
         }
     }
 }

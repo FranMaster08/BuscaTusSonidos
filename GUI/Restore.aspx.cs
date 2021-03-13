@@ -1,6 +1,9 @@
 ﻿using BLL;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -30,20 +33,27 @@ namespace GUI
 
         protected void restore_Click(object sender, EventArgs e)
         {
+
             try
             {
+                string SaveLocation = string.Empty;
+                string nombreArchivo = string.Empty;
+                string destino = @"C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup";//poner la ruta donde quieres que quede el archivo
+                //Subimos Backup al Server
+                if (btnFileUpload.HasFile)
+                {
+                    nombreArchivo = System.IO.Path.GetFileName(btnFileUpload.PostedFile.FileName);
+                    SaveLocation = destino + @"\" + btnFileUpload.FileName;
+                    //guardamos el archivo
+                    btnFileUpload.PostedFile.SaveAs(SaveLocation);
+                }
+                
+                bool realizado = GestorBackup.RealizarRestore(destino + @"\"+btnFileUpload.FileName);
 
-                string PathServidor = Server.MapPath(".");
-                string PathDestino = $"{PathServidor}//backup//{btnFileUpload.FileName}";
-
-
-                btnFileUpload.SaveAs(PathServidor);
-               // var Ruta = Server.MapPath(btnFileUpload.FileName);
-               // bool realizado = GestorBackup.RealizarRestore(Ruta);
             }
             catch (Exception ex)
             {
-                Response.Write(ex.Message);                
+                Response.Write(ex.Message);
             }
         }
     }
